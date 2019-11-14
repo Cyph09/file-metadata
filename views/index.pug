@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    .card.cyan.darken-4
+        .card-content.white-text
+            span.card-title.center-align Upload File
+                form(action="/api/fileanalyse", method="POST", enctype="multipart/form-data")
+                    .file-field.input-field
+                        .btn.orange.darken-2
+                            span Choose File
+                            input(type="file", id="file", name="fileName")
+                        .file-path-wrapper
+                            input(type="text").file-path.validate.white-text
+                    button(type='submit').waves-effect.waves-orange.darken-2.btn-flat.white-text Upload

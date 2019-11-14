@@ -29,7 +29,7 @@ app.post("/api/fileanalyse", multer().single("fileName"), (req, res) => {
 });
 
 // Server 
-const PORT = 5000 || process.env.PORT;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`App running on port ${PORT}`);
 });
